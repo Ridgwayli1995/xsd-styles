@@ -1,0 +1,23 @@
+{
+  "name": "xsd-styles",
+  "version": "1.0.0",
+  "description": "xsd styles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suuua/xsd-styles.git"
+  },
+  "keywords": [
+    "xsd",
+    "styles"
+  ],
+  "author": "suuua",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suuua/xsd-styles/issues"
+  },
+  "homepage": "https://github.com/suuua/xsd-styles#readme"
+}
