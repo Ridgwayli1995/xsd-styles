@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/suuua/xsd-styles/issues"
   },
-  "homepage": "https://github.com/suuua/xsd-styles#readme"
+  "homepage": "https://github.com/suuua/xsd-styles#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.3.2"
+  }
 }
