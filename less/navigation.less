@@ -1,0 +1,67 @@
+/*主导航栏 放在header的右边*/
+.m-nav {
+    @padding: 43px;
+    box-sizing: border-box;
+    height: @headerHeight;
+    /*直接子元素防止污染后代li*/
+    &>li {
+        .inline();
+        padding:0 @padding;
+        .link {
+            .inline();
+            position: relative;
+            padding: 0 5px;
+            .size(@headerHeight, auto, 84px, @fontSize1);
+            height: @headerHeight;
+            color: @colorBlack;
+        }
+        &.selected .link:after {
+            .inline();
+            .leftBottom();
+            content: " ";
+            .size(3px, 100%);
+            background-color: #44b549;
+        }
+    }
+    &>li:last-child {padding-left: @padding;}
+}
+
+/*侧导航栏*/
+.m-sidenav {
+    width: @sideNavWidth;
+    font-size: 14px;
+    .link {
+        display: block;
+        color: @colorBlack;
+    }
+    .level {
+        border-bottom: 1px solid @borderGray;
+        &:last-child {border: 0;}
+        .level-title {color: #9f9f9f;}
+        .level-title, .level-opt {
+            .lineHeight(@sideNavLevelHeight);
+            .info-l {
+                position: relative;
+                float: left;
+                width: @sideNavWidth * 0.36;
+                height: @sideNavLevelHeight;
+                background-repeat: no-repeat;
+                background-size: 16px;
+                background-position: 70% center;
+            }
+        }
+        .level-opt {
+            &:hover {
+                background-color: @backGray;
+            }
+            &.active {
+                background-color: @backGreen;
+                a {color: @white;}
+            }
+            &.disabled {
+                background-color: inherit;
+                a {color: #888;}
+            }
+        }
+    }
+}

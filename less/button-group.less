@@ -1,0 +1,68 @@
+.u-btn{
+	.inline();
+	.size(30px;auto;30px;16px);
+	padding: 0 10px;
+	border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+	&.block {
+		.block();
+	}
+	//按钮的尺寸
+	&.large {
+		.size(45px; 120px; 45px; inherit);
+	}
+    &.middle {
+		.size(32px;auto;32px;16px);
+	}
+	&.small {
+        .size(28px;auto;28px;13px);
+	}
+    &.smaller {
+        .size(22px;auto;22px;13px);
+    }
+	//按钮的颜色
+	&.default {
+		border:1px solid @borderGray2;
+		background-color: #fff;
+	}
+	&.info {
+		border: 1px solid @backInfo;
+    	background-color: @backInfo;
+    	color: #fff;
+	}
+	&.success {
+		border: 1px solid @backGreen;
+    	background-color: @backGreen;
+    	color: #fff;
+	}
+	&.warning {
+		border: 1px solid @backWarn;
+    	background-color: @backWarn;
+    	color: #fff;
+	}
+    //按钮的状态
+    &.able {
+        color: #fff;
+        background: #199ed8;
+        border: 1px solid #199ed8;
+    }
+    &:active {
+        background-color: #1780ae;
+    }
+    &.disable {
+        color: #fff;
+        background: #666;
+        border: 1px solid #666;
+    }
+    &.btn-cancel {
+        background-color: #fff;
+        color: #199ed8;
+        border: 1px solid #199ed8;
+    }
+	//按钮组
+	&.btn-group {
+		margin-right: 10px;
+		&:last-child{margin-right: 0}
+	}
+}

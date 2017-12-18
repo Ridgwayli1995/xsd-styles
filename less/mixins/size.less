@@ -1,0 +1,25 @@
+.size(@height; @width){
+	height: @height;
+	width: @width;
+}
+
+.size(@height; @width; @lineHeight; @fontSize){
+	height: @height;
+	width: @width;
+	line-height: @lineHeight;
+	font-size: @fontSize;
+}
+
+.lineHeight(@height){
+	height: @height;
+	line-height: @height;
+}
+
+.square(@size){
+	.size(@size; @size);
+}
+
+.circular(@size){
+	.size(@size; @size);
+	border-radius: @size;
+}

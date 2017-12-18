@@ -1,0 +1,38 @@
+/* table外部的包含块 */
+.m-table-outer{
+	margin-bottom:22px;
+	border:1px solid @borderGray;
+	.m-table{
+		border: none;
+		margin-bottom: 0;
+		font-size: 13px;
+	}
+    /* 无数据的一个信息块 */
+    .list-nodata, .list-nosearch{
+        .size(300px; auto; 300px; 14px);
+        text-align: center;
+        color: @colorGray;
+    }
+}
+//table主体，用于不需要外部包含块的表width100%
+.m-table{
+	width: 100%;
+	vertical-align: middle;
+	text-align: left;
+	border:1px solid @borderGray;
+	margin-bottom:22px;
+	th, td {
+        max-width:70px;
+		padding:14px 0 10px 12px;
+		border-bottom:1px solid @borderGray;
+		text-align: left;
+	}
+    td {
+        white-space:normal;
+        word-break:break-all;
+        word-wrap:break-word;
+    }
+	th:last-child,td:last-child {padding-right:12px;}
+	tr:last-child td {border:none;}
+}
+

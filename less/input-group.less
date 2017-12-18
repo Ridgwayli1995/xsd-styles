@@ -1,0 +1,50 @@
+//输入框 默认情况下为
+input.form-control{
+	padding:0 6px;
+	border-color: @borderGray;
+	.size(inherit;inherit;inherit;inherit);
+}
+//div.input-group>input.form-control+label+div.input-group-addon
+//顶栏搜索框部分
+//包含输入框的div
+.input-group{
+	font-size: 0;
+	vertical-align: middle;
+	input.form-control{
+		.size(30px; 200px; 30px; 13px);
+		border-width: 1px;
+		border-style: solid;
+	}
+	.input-group-addon{
+		.inline();
+		border-width: 1px 1px 1px 0;
+		border-style: solid;
+		.square(30px);
+		vertical-align: top;
+		box-sizing: content-box;
+		background-color: #fff;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 50%;
+		border-color: @borderGray;
+	}
+	&.small{
+		input{
+			.size(22px; 70px; 22px; 12px);
+			border-width: 1px 0 1px 1px;
+		}
+		.input-group-addon{
+			.square(22px);
+			background-size: 60%;
+		}
+	}
+}
+
+//表单的输入框
+input.form-input{
+  .inline();
+  .size(45px;300px;45px;14px);
+  border:1px solid @borderGray;
+  text-indent: 1em;
+}
+

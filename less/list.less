@@ -1,0 +1,11 @@
+.m-user {
+    @padding: 16px;
+    .lineHeight(86px);
+    &>li {.inline();}
+    &>li:first-child {padding-right: @padding;}
+    &>li+li {
+        padding-left: @padding;
+        border-left: 1px solid @borderGray;
+    }
+    .logout {color: #222;}
+}

@@ -1,0 +1,68 @@
+/* 不带前面标记选择框，选中蓝色竖线分割 */
+.u-fake-check {
+    &+.m-fake-check{border-left: 1px solid #e7e7eb;}
+    .name {
+        .inline();
+        font-size: 14px;
+        padding: 0 18px;
+        cursor: pointer;
+    }
+    &:first-child>.name {
+        padding-right: 18px;
+    }
+    &>input[type="radio"], &>input[type="checkbox"] {display: none;}
+    &>input[type="radio"]:checked+.name,
+    &>input[type="checkbox"]:checked+.name {
+        color: #459aed;
+    }
+}
+
+
+/* 方形背景色选择框样式 */
+.u-fake-check-bg {
+    display: inline;
+    font-size: 0;
+    .name {
+        display: inline-block;
+        padding: 0 10px;
+        border-width: 1px 0 1px 1px;
+        border-style: solid;
+        border-color: #e7e7eb;
+        .size(32px, auto, 32px, 14px);
+        min-width: 108px;
+        text-align: center;
+        cursor: pointer;
+    }
+    &:last-child>.name {border-width:1px;}
+    &>input[type="radio"]:checked+.name,
+    &>input[type="checkbox"]:checked+.name {
+        border-color: #576477;
+        background-color: #576477;
+        color: #fff;
+    }
+}
+
+/* 方形的选中框 */
+.u-fake-check-squaer {
+    .inline();
+    margin-right: 80px;
+    cursor: pointer;
+    font-size: 14px;
+    &:last-child {margin-right: 0;}
+    .name:before {
+        content: " ";
+        display: inline-block;
+        position: relative;
+        bottom: 1px;
+        margin-right: 8px;
+        border: 1px solid #b2b2b2;
+        .square(11px);
+        vertical-align: middle;
+    }
+    input[type="radio"]:checked+.name:before,
+    input[type="checkbox"]:checked+.name:before {
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAHCAMAAADtRZdSAAAAV1BMVEVMaXEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/eCaEAAAAHHRSTlMAbfPchdvkIT0kiX6IKt7jGZXSEwHIowMNt8urv5hZOQAAAD1JREFUeNolikkSgCAQxNoVRTYFUbH//06gJpfkEAjPXyRS5odNtTp5vxjXHTOvCAycDJeAxkF6Jbt2tqsCUy0CRpjWUIUAAAAASUVORK5CYII=);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}

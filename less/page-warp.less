@@ -1,0 +1,72 @@
+.m-page-warp {
+    @height: 22px;
+    @radius: 2px;
+    @borderColor: #b5bfc1;
+    @pageWarpIconSize: 5px;
+    @pageWarpIconColor: #7f8390;
+    &.r {float: right;}
+    font-size: @fontSize2;
+    margin-top: 15px;
+    .page-list, .page-form {
+        .inline();
+        vertical-align: top
+    }
+    .page-list {
+        &>li {
+            .inline();
+            margin-right: 7px;
+            color: @borderColor;
+        }
+        &>li.num {
+            .lineHeight(@height + 2px);
+            padding: 0 6px;
+            color: #6f6f70;
+            vertical-align: bottom;
+        }
+        &>li.hide {display: none;}
+        .page-pre, .page-next {
+            .inline();
+            .size(@height, @height, inherit, @height);
+            vertical-align: top;
+            text-align: center;
+            color: inherit;
+            border: 1px solid #dbdee6;
+            border-radius: @radius;
+            &:after {
+                content: " ";
+                .inline();
+            }
+        }
+        .page-pre:after {
+            border-width: @pageWarpIconSize @pageWarpIconSize @pageWarpIconSize 0;
+            border-color:transparent @pageWarpIconColor  transparent transparent;
+            border-style: solid;
+        }
+        .page-next:after {
+            border-width:@pageWarpIconSize 0 @pageWarpIconSize @pageWarpIconSize;
+            border-color: transparent transparent transparent @pageWarpIconColor;
+            border-style: solid;
+        }
+        .page-num {margin-right: 3px;}
+
+    }
+    .page-form {
+        @border: 1px solid @borderColor;
+        .page-warp-nums {
+            border: @border;
+            width: 48px;
+            .lineHeight(@height);
+            text-align: center;
+            border-radius: @radius;
+        }
+        .page-submit {
+            box-sizing: content-box;
+            background-color: @white;
+            border: @border;
+            width: 56px;
+            .lineHeight(@height);
+            font-size: @fontSize2;
+            border-radius: @radius;
+        }
+    }
+}

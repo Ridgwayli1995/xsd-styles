@@ -1,0 +1,75 @@
+/*
+* 页面布局相关样式
+*/
+.f-area {
+	min-height: 100%;
+	max-width: @maxWidth;
+	margin: auto;
+}
+
+.g-header{
+	background-color: @white;
+	.lineHeight(@headerHeight);
+	.f-area();
+	.header-l {
+		@infoPad: 20px;
+		float: left;
+		.lineHeight(@headerHeight);
+		.info:first-child {padding-right: @infoPad;}
+		.info+.info {
+			padding-left: @infoPad;
+			border-left: 1px solid @borderGray2;
+		}
+	}
+	.icon-logo {
+		.inline();
+		margin-right: 18px;
+		.square(46px);
+		background-repeat: no-repeat;
+		background-size: 100%;
+	}
+	.logo, .title {
+		.inline();
+		line-height: 1;
+		font-size: 22px;
+		color: #949494;
+	}
+}
+.g-footer{
+	.lineHeight(@footerHeight);
+	color: @white;
+	font-size: @fontSize2;
+	text-align: center;
+	background-color: @backFooter;
+}
+
+.g-container{
+	padding: 40px 0;
+}
+.g-box{
+	@innerBoxPadding: 30px;
+	.clearfix();
+	margin: auto;
+	border: 1px solid  @borderGray2;
+	height: inherit;
+	.f-area();
+	background-color: @white;
+	.g-inner-box-r {
+		box-sizing: border-box;
+		float: right;
+		width: @innerBoxRightWidth;
+		border-left: 1px solid @borderGray2;
+		min-height: @boxMinHeight;
+	}
+	.g-inner-box-l {
+		float: left;
+	}
+	.g-inner-box-r-head {
+		padding-left: @innerBoxPadding;
+		border-bottom: 1px solid @borderGray2;
+		.lineHeight(75px);
+	}
+	.g-inner-box-r-body {
+		padding: @innerBoxPadding @innerBoxPadding 40px @innerBoxPadding;
+	}
+}
