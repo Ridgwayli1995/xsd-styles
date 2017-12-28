@@ -1,41 +1,48 @@
 /*
 * 页面布局相关样式
 */
-.f-area {
-	min-height: 100%;
-	max-width: @maxWidth;
-	margin: auto;
-}
-
-.g-header{
+.m-header{
+	@infoPad: 16px;
 	background-color: @white;
+	overflow: hidden;
 	.lineHeight(@headerHeight);
-	.f-area();
-	.header-l {
-		@infoPad: 20px;
-		float: left;
-		.lineHeight(@headerHeight);
-		.info:first-child {padding-right: @infoPad;}
-		.info+.info {
+	.inner {
+		.f-area();
+		.inner-l {
+			@innerLdistance: 20px;
+			float: left;
+			&>span:first-child {padding-right: @innerLdistance;}
+			&>span + span {
+				padding-left: @innerLdistance;
+				border-left: 1px solid #d9d9d9;
+			}
+		}
+		.inner-r {
+			float: right;
+		}
+	}
+	.info {
+		margin-left: 86px;
+		line-height: 86px;
+		& > li {
+			display: inline;
+		}
+		& > li:first-child {padding-right: @infoPad;}
+		& > li + li {
 			padding-left: @infoPad;
 			border-left: 1px solid @borderGray2;
 		}
 	}
-	.icon-logo {
-		.inline();
-		margin-right: 18px;
-		.square(46px);
-		background-repeat: no-repeat;
-		background-size: 100%;
-	}
-	.logo, .title {
+	.logo,.title {
+		@titleFont: 22px;
 		.inline();
 		line-height: 1;
-		font-size: 22px;
+		font-size: @titleFont;
 		color: #949494;
 	}
+	
 }
-.g-footer{
+.m-footer {
 	.lineHeight(@footerHeight);
 	color: @white;
 	font-size: @fontSize2;
@@ -43,10 +50,10 @@
 	background-color: @backFooter;
 }
 
-.g-container{
-	padding: 40px 0;
+.m-main {
+	padding: @mainAreaDistance 0;
 }
-.g-box{
+.m-box {
 	@innerBoxPadding: 30px;
 	.clearfix();
 	margin: auto;
@@ -54,22 +61,25 @@
 	height: inherit;
 	.f-area();
 	background-color: @white;
-	.g-inner-box-r {
+	.inner-r {
 		box-sizing: border-box;
 		float: right;
 		width: @innerBoxRightWidth;
 		border-left: 1px solid @borderGray2;
 		min-height: @boxMinHeight;
 	}
-	.g-inner-box-l {
+	.inner-l {
+		padding-top: 16px;
 		float: left;
 	}
-	.g-inner-box-r-head {
+	.inner-r-head {
 		padding-left: @innerBoxPadding;
 		border-bottom: 1px solid @borderGray2;
 		.lineHeight(75px);
+		font-weight: normal;
+		font-size: @fontSize1;
 	}
-	.g-inner-box-r-body {
+	.inner-r-body {
 		padding: @innerBoxPadding @innerBoxPadding 40px @innerBoxPadding;
 	}
 }

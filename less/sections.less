@@ -1,16 +1,23 @@
-.m-section{
+.m-section {
 	margin-bottom: 40px;
-	.section-title{
-		.lineHeight(40px);
-		padding-left:20px;
+	.section-title {
+		line-height: 40px;
+		display: block;
+		padding-left: 28px;
 		border-width: 1px 1px 0 1px;
 		border-style: solid;
 		border-color: @borderGray;
-		&.style2{
+		&.style1 {
+			line-height: 55px;
+			font-size: 16px;
+			background-color: #f6f8f9;
+			border: 0;
+		}
+		&.style2 {
 			padding: 0;
 			border: 0;
 			color: #8d8d8d;
-			&:before{
+			&:before {
 				display: inline-block;
 				box-sizing: border-box;
 				position: relative;
@@ -23,8 +30,8 @@
 			}
 		}
 	}
-	.section-o{
-		padding: 20px 20px 30px 20px;
+	.section-o {
+		padding: 30px 28px 30px 28px;
 		border:1px solid @borderGray;
 		&.cover{padding: 0;}
 		&.noborder{border: 0;}

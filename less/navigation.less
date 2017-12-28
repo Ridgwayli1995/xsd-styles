@@ -37,8 +37,8 @@
     .level {
         border-bottom: 1px solid @borderGray;
         &:last-child {border: 0;}
-        .level-title {color: #9f9f9f;}
-        .level-title, .level-opt {
+        .level-info {color: #9f9f9f;}
+        .level-info {
             .lineHeight(@sideNavLevelHeight);
             .info-l {
                 position: relative;
@@ -50,7 +50,8 @@
                 background-position: 70% center;
             }
         }
-        .level-opt {
+        .level-info.leaf {
+            color: @colorBlack;
             &:hover {
                 background-color: @backGray;
             }
